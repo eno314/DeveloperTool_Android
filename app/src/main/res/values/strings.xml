@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DeveloperTool</string>
+    <string name="color_text_input_hint">input color code (ex. #ffffff)</string>
 </resources>
