@@ -1,9 +1,9 @@
 package jp.eno314.developertool
 
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import jp.eno314.developertool.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        binding.button.setOnClickListener({
+        binding.button.setOnClickListener {
             val inputText = binding.textInputLayout.editText?.text?.toString()
                     ?: return@setOnClickListener
             binding.root.setBackgroundColor(Color.parseColor(inputText))
-        })
+        }
     }
 }
