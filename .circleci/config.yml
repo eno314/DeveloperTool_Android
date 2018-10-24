@@ -6,4 +6,9 @@ jobs:
       - image: circleci/android:api-28-alpha
     steps:
       - checkout
-      - run: echo "Hello World!"
+      - run:
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
+      - run:
+          name: Run Compile
+          command: ./gradlew assembleDebug
