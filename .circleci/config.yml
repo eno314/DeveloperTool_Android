@@ -38,3 +38,10 @@ jobs:
               curl -s https://codecov.io/bash > .codecov
               chmod +x .codecov
               ./.codecov
+      - run:
+          name: Run Deploy
+          command: |
+              DEPLOYGATE_API_TOKEN=$DT_ENV_DEPLOYGATE_API_TOKEN \
+              DEPLOYGATE_USER_NAME=$DT_ENV_DEPLOYGATE_USER_NAME \
+              DEPLOYGATE_MESSAGE="for developpers" \
+              ./gradlew uploadDeployGateDebug
