@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Create google-services.json
-          command: echo $DT_ENV_GOOGLE_SERVICES_JSON_BASE64 | base64 --decode --ignore-garbage > ${HOME}/${CIRCLE_PROJECT_REPONAME}/app/google-services.json
+          command: echo $DT_ENV_GOOGLE_SERVICES_JSON_BASE64 | base64 --decode --ignore-garbage > ./app/google-services.json
       - restore_cache: # キャッシュをリストア
           key: jars-{{checksum "build.gradle"}}-{{checksum "app/build.gradle"}}
       - run:
