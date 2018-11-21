@@ -1,7 +1,7 @@
 package jp.eno314.developertool
 
-import androidx.databinding.DataBindingUtil
 import android.graphics.Color
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import jp.eno314.developertool.databinding.ActivityMainBinding
